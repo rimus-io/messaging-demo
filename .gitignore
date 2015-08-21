@@ -16,3 +16,7 @@ hs_err_pid*
 *.iml
 .idea/
 .idea_modules/
+
+target/
+
+.DS_Store

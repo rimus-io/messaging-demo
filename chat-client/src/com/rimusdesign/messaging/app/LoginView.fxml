@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane prefHeight="640.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rimusdesign.messaging.app.controller.LoginViewController">
+    <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="283.0" minHeight="10.0" prefHeight="254.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="355.0" minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="539.0" minHeight="10.0" prefHeight="136.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <VBox alignment="CENTER" prefHeight="260.0" prefWidth="167.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <children>
+                <TextField fx:id="usernameInput" onAction="#onUsernameEnter" onKeyReleased="#onUsernameKeyReleased" promptText="Username *" />
+                <TextField fx:id="chatGroupInput" onAction="#onChatGroupEnter" onKeyReleased="#onChatGroupKeyReleased" promptText="Chat group" />
+                <Button fx:id="loginButton" mnemonicParsing="false" onAction="#onLoginClick" onKeyReleased="#onLoginKeyRelease" prefHeight="32.0" prefWidth="100.0" text="LOGIN">
+               <VBox.margin>
+                  <Insets top="32.0" />
+               </VBox.margin></Button>
+            </children>
+        </VBox>
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <children>
+            <Label text="*" textFill="#2594f4" />
+            <Label text="Username should be of minimum 4 characters, and maximum 32 characters long." textAlignment="CENTER" textFill="#2594f4" wrapText="true" />
+         </children>
+         <padding>
+            <Insets left="50.0" right="50.0" />
+         </padding>
+      </HBox>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+         <image>
+            <Image url="@chat-icon.png" />
+         </image>
+      </ImageView>
+    </children>
+</GridPane>
