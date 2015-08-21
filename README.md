@@ -9,6 +9,40 @@ IMPORTANT
 This is not a production ready code and should only be used for educational purposes.
 
 
+Modules
+-------
+
+
+### Core
+
+
+'messaging-core' module contains common classes and interfaces.
+Most importantly it contains codecs that should be used for message encryption and decryption.
+Codecs are built to the protocol described below. All codecs are covered by tests.
+
+
+### Server
+
+
+'messaging-server' module contains an implementation of the actual server that accepts connections and handles traffic, message routing etc.
+The entry class is 'MessagingServer'.
+
+
+### Client
+
+
+'messaging-client' module is essentially a client library that allows PUB/SUB type of connections.
+An example of it's use can be seen in 'chat-client' app or other executables in main 'src' directory.  
+
+
+### Chat app
+
+
+'chat-client' module is a chat application built using JavaFX. It uses 'messaging-client' library to communicate with a running instance of 'messaging-server'.
+It uses PUB connection to write messages into the topic and SUB connection to receive messages being written into the topic.
+As this is only an example, high rates of incoming messages may throw UI update related errors. If running 'ChatBotServerLauncher' - limit number of bots to 20 or so.
+
+
 Messaging framework protocol (mfp) v.1
 --------------------------------------
 
